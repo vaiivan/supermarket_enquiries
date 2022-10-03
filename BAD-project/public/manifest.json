@@ -1,0 +1,43 @@
+{
+    "name": "格物致知",
+    "short_name": "格物",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#A4C9B8",
+    "theme_color": "#A4C9B8",
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "/serverDefaultedImages/icon-72x72.png",
+        "type": "image/png", "sizes": "72x72"
+      },
+      {
+        "src": "/serverDefaultedImages/icon-96x96.png",
+        "type": "image/png", "sizes": "96x96"
+      },
+      {
+        "src": "/serverDefaultedImages/icon-128x128.png",
+        "type": "image/png","sizes": "128x128"
+      },
+      {
+        "src": "/serverDefaultedImages/icon-144x144.png",
+        "type": "image/png", "sizes": "144x144"
+      },
+      {
+        "src": "/serverDefaultedImages/icon-152x152.png",
+        "type": "image/png", "sizes": "152x152"
+      },
+      {
+        "src": "/serverDefaultedImages/icon-192x192.png",
+        "type": "image/png", "sizes": "192x192"
+      },
+      {
+        "src": "/serverDefaultedImages/icon-384x384.png",
+        "type": "image/png", "sizes": "384x384"
+      },
+      {
+        "src": "/serverDefaultedImages/icon-512x512.png",
+        "type": "image/png", "sizes": "512x512"
+      }
+    ]
+  }

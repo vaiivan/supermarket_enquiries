@@ -1,0 +1,143 @@
+body {
+  background-color: #8ac2af;
+}
+
+.container {
+  height: 100%;
+}
+
+.button-sets {
+  margin-top: 20px;
+}
+
+.cameraWarning {
+  margin-top: 20px;
+  color: red;
+}
+
+.camera {
+  margin-top: 20%;
+  background-color: #fbfbfb;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.background-picture {
+  background-image: url(/serverDefaultedImages/qrOverlay.svg);
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 50;
+  position: relative;
+}
+
+#canvas, .layer{
+    display: none;
+}
+
+/* modal box */
+.modal {
+  position:fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  background: rgb(0, 0,0, 0.7);
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+}
+
+.modalbox{
+width: auto;
+height: auto;
+background-color: #e9f7dc;
+border-radius: 10px;
+  padding: 50px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+}
+
+.modalbox .buttons{
+display:flex;
+justify-content: center;
+align-items: center;
+  margin-top: 20px;
+}
+
+.buttons > form{
+display: flex;
+  padding-right: 10px;
+}
+
+.buttons > button{
+margin: 0.5rem;
+}
+
+
+.modal.show{
+  opacity: 1;
+  pointer-events: all;
+}
+
+.warning{
+  color: red;
+}
+
+.cameraButton, .uploadButton, .profileButton{
+  font-size: 17px;
+  color: #4a3c3c;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 991px){
+  .cameraButton, .uploadButton, .profileButton{
+      font-size: 17px;
+      color: #4a3c3c;
+      margin-left: 10px;
+      margin-top: 10px;
+  }
+
+  #Navbar input {
+      border: none;
+      width: 30%;
+  }
+
+  #Navbar a:not(.camera){
+      color: #222529;
+      margin-right: 10px;
+      margin-top: 10px;
+      text-decoration: none;
+  }
+
+  #Navbar a:hover{
+      color: #fbfbfb;
+      cursor: pointer;
+  }
+}
+
+.warning{
+  white-space: pre-line;
+}
+
+textarea{
+  height:40px;
+  resize: none;
+}

@@ -1,0 +1,52 @@
+name: deployment
+on:
+  push:
+    branches:
+      - '*'
+  workflow_dispatch:
+
+env:
+  DB_NAME: sup9market
+  DB_USERNAME: postgres
+  DB_PASSWORD: postgres
+
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    container: node:latest
+    env:
+      DB_HOST: db
+    services:
+      db:
+        image: postgres
+        env: 
+          POSTGRES_DB: ${{env.DB_NAME}}
+          POSTGRES_USERNAME: ${{env.DB_USERNAME}}
+          POSTGRES_PASSWORD: ${{env.DB_PASSWORD}}
+        ports:
+          - 5432:5432
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          yarn install 
+          yarn knex migrate:latest --env test
+          yarn knex seed:run
+
+  # deployment
+
+  deploy:
+      if: github.ref_name == 'production'
+      runs-on: ubuntu-latest
+      needs: testing
+      steps:
+      - uses: fifsky/ssh-action@master
+        with:
+          command: |
+            cd BAD-project
+            git pull
+            yarn install
+            yarn knex migrate:latest --env production
+            forever restart 0
+          host: 65.1.177.79
+          user: ubuntu
+          key: ${{secrets.SSH_PRIVATE_KEY}}

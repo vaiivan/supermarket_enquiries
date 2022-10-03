@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supermarket inquiry</title>
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <!-- fontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- my css -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <!-- manifest -->
+    <link rel="manifest" href="manifest.json" />
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="/serverDefaultedImages/icon-72x72.png" />
+    <link rel="apple-touch-icon" href="/serverDefaultedImages/icon-96x96.png" />
+    <link
+      rel="apple-touch-icon"
+      href="/serverDefaultedImages/icon-128x128.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="/serverDefaultedImages/icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="/serverDefaultedImages/icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="/serverDefaultedImages/icon-192x192.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="/serverDefaultedImages/icon-384x384.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="/serverDefaultedImages/icon-512x512.png"
+    />
+    <meta name="apple-mobile-web-app-status-bar" content="#A4C9B8" />
+    <meta name="theme-color" content="#A4C9B8" />
+  </head>
+
+  <body>
+    <div id="modalbox">
+      <div id="modal-login" class="modal">
+        <div class="modalbox">
+          <div class="information">
+            <h1>登入</h1>
+            <div class="loginWarning warning"></div>
+            <form action="/login" method="POST" class="loginForm">
+              <div class="form-group">
+                <label for="email">電郵</label>
+                <input type="email" name="email" placeholder="email" />
+              </div>
+              <div class="form-group">
+                <label for="password">密碼</label>
+                <input type="password" name="password" placeholder="Password" />
+              </div>
+              <div class="buttons">
+                <button type="submit" class="btn btn-warning">登入</button>
+                <button class="btn btn-dark loginCancel">取消</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id="modal-register" class="modal">
+        <div class="modalbox">
+          <div class="information">
+            <h1>註冊</h1>
+            <div class="registerWarning warning"></div>
+            <form class="registerForm" action="/register" method="POST">
+              <div class="form-group">
+                <label for="email">電郵</label>
+                <input type="email" name="email" placeholder="Email" />
+              </div>
+              <div class="form-group">
+                <label for="username">暱稱</label>
+                <input type="username" name="username" placeholder="Nickname" />
+              </div>
+              <div class="form-group">
+                <label for="password">密碼</label>
+                <input class="checkPassword" type="password" name="password" placeholder="Password" />
+              </div>
+              <div class="form-group">
+                <label for="checkPassword">確認密碼</label>
+                <input
+                  class="checkPassword"
+                  type="password"
+                  name="checkPassword"
+                  placeholder="Password"
+                />
+              </div>
+              <div class="buttons">
+                <button type="submit" class="btn btn-warning">註冊</button>
+                <button class="btn btn-dark registerCancel">取消</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div id="modalbox"></div>
+      <div class="main">
+        <img src="/serverDefaultedImages/icon-192x192.png">
+        <button class="btn btn-light loginButton">登入</button>
+        <button class="btn btn-light registerButton">註冊</button>
+      </div>
+    </div>
+    <!-- script -->
+    <!-- bootscrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <!-- my src code -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>
